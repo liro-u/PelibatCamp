@@ -3,7 +3,7 @@ import Video from "./Video";
 
 const VideoRect = ({
   width = "100vw",
-  height = "100vh",
+  height = "100svh",
   videoPosition = "absolute",
 
   style = {},

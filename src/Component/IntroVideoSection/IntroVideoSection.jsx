@@ -8,7 +8,7 @@ import FastContact from "../FastContact/FastContact";
 const IntroVideoSection = () => {
   return (
     <VideoRect autoPlay="true" src="videoDemoVitrine.mp4">
-      <VBox justifyContent="center" mainBoxStyle={{ height: "100vh" }}>
+      <VBox justifyContent="center" mainBoxStyle={{ height: "100svh" }}>
         <CenterContainer>
           <Text
             text="Pelibat Camp"
