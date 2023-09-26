@@ -14,6 +14,13 @@ import {
 } from "../Component/Conversation/Conversation";
 import HBox from "../StructuralComponent/HBox";
 import IconButton from "../StructuralComponent/IconButton";
+import Contact from "../Component/Contact/Contact";
+import Image from "../StructuralComponent/Image";
+import GiftCard from "../Component/GiftCard/GiftCard";
+import Vestiaire from "../Component/Vestiaire/Vestiaire";
+import Tarifs from "../Component/Tarifs/Tarifs";
+import Video from "../StructuralComponent/Video";
+import Avis from "../Component/Avis/Avis";
 
 const CustomProfile = ({ backgroundColor, ...content }) => {
   return (
@@ -91,6 +98,65 @@ const Vitrine = () => {
             </Conversation>
           </MarginContainer>
         </MarginContainer>
+      </ColorRect>
+
+      {/*---------- Avis ----------*/}
+      <ColorRect backgroundColor="var(--pastel2)">
+        <MarginContainer margin="var(--margin-section)">
+          <Avis />
+        </MarginContainer>
+      </ColorRect>
+
+      {/*---------- Video ----------*/}
+      <ColorRect backgroundColor="var(--light-color)">
+        <ColorRect
+          backgroundColor="var(--pastel2)"
+          style={{
+            color: "var(--dark-color)",
+            borderRadius: "0px 0px 10px 10px",
+          }}
+        >
+          <MarginContainer margin={"10px"}>
+            <Video
+              width="100%"
+              height="calc(100%)"
+              src="videoDemoVitrine.mp4"
+              style={{ borderRadius: "10px" }}
+            />
+          </MarginContainer>
+        </ColorRect>
+      </ColorRect>
+
+      {/*---------- Tarifs ----------*/}
+      <ColorRect
+        backgroundColor="var(--light-color)"
+        style={{ color: "var(--dark-color)" }}
+      >
+        <MarginContainer margin="var(--margin-section)">
+          <Tarifs id="tarifs" />
+        </MarginContainer>
+      </ColorRect>
+
+      {/*---------- Shop ----------*/}
+      <ColorRect
+        backgroundColor="var(--light-color)"
+        style={{ color: "var(--dark-color)" }}
+      >
+        <MarginContainer margin="var(--margin-section)">
+          <VBox gap="50px">
+            <Vestiaire />
+            <GiftCard />
+          </VBox>
+        </MarginContainer>
+      </ColorRect>
+
+      {/*---------- Contact ----------*/}
+      <ColorRect backgroundColor="#333">
+        <CenterContainer>
+          <MarginContainer margin="20px">
+            <Contact />
+          </MarginContainer>
+        </CenterContainer>
       </ColorRect>
     </VBox>
   );

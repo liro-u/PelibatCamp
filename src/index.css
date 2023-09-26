@@ -14,9 +14,10 @@
   --pastel4: #4f704b;
 
   --margin-section: 30px;
+  --title-spacing: 50px;
 
-  --message-sender-color: #067fab;
-  --message-receiptor-color: #758cff;
+  --message-sender-color: #0ab77d;
+  --message-receiptor-color: #44923b;
 }
 
 body {
