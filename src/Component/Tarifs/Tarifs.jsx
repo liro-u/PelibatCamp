@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import VBox from "../../StructuralComponent/VBox";
 import Text from "../../StructuralComponent/Text";
 import ColorRect from "../../StructuralComponent/ColorRect";
 import CenterContainer from "../../StructuralComponent/CenterContainer";
 import MarginContainer from "../../StructuralComponent/MarginContainer";
 
-const Tarif = ({ title, otherInformations, reservationLink }) => {
+const Tarif = ({ title, otherInformations, reservationLink, ...content }) => {
   return (
     <ColorRect
       backgroundColor="var(--pastel3)"
       style={{ borderRadius: "30px" }}
+      {...content}
     >
       <MarginContainer margin="var(--margin-section)">
         <CenterContainer>
@@ -55,18 +56,22 @@ const Tarifs = ({ ...content }) => {
       <VBox gap="20px">
         <Tarif
           title="Programme Personnalisé"
+          id="programme_perso"
           otherInformations={["60€ (6 semaines)"]}
         />
         <Tarif
           title="Coaching"
+          id="coaching"
           otherInformations={["55€/H", "", "pack de 10 séances 50€/séances"]}
         />
         <Tarif
           title="Coaching Visio"
+          id="coaching_visio"
           otherInformations={["50€/H", "", "pack de 10 séances 45€/séances"]}
         />
         <Tarif
           title="Functional training"
+          id="functional_training"
           otherInformations={[
             "(cours collectif limité 12 personnes)",
             "",
@@ -87,6 +92,7 @@ const Tarifs = ({ ...content }) => {
         />
         <Tarif
           title="Randonnée des côteaux"
+          id="rando"
           otherInformations={[
             "50€/H pour le groupe",
             "(12 maximum).",
@@ -96,7 +102,11 @@ const Tarifs = ({ ...content }) => {
             "Parcours rouge (3h)",
           ]}
         />
-        <Tarif title="Bilan nutrition" otherInformations={["40€"]} />
+        <Tarif
+          title="Bilan nutrition"
+          id="bilan_nutri"
+          otherInformations={["40€"]}
+        />
         <Tarif
           title="Suivi nutrition mois"
           otherInformations={[

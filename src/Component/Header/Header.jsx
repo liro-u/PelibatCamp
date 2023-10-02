@@ -1,7 +1,6 @@
 import React from "react";
 import HBox from "../../StructuralComponent/HBox";
 import Image from "../../StructuralComponent/Image";
-import Text from "../../StructuralComponent/Text";
 import HeaderMenu from "./HeaderMenu";
 
 const Header = () => {

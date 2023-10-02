@@ -4,16 +4,17 @@ import Image from "../../StructuralComponent/Image";
 import Text from "../../StructuralComponent/Text";
 import CenterContainer from "../../StructuralComponent/CenterContainer";
 
-const SingleComment = () => {
+const SingleComment = ({
+  name = "Marion",
+  src = "photoProfileJoe.png",
+  avis = `j'ai adoré mes séance de fitness avzec eux, ceci est un avis par defaut a remplacer.`,
+}) => {
   return (
     <CenterContainer>
       <VBox>
-        <Image src="photoProfileJoe.png" width="100px" height="100px" />
-        <Text text="Marion" />
-        <Text
-          fontSize="20px"
-          text={`j'ai adoré mes séance de fitness avzec eux, ceci est un avis par defaut a remplacer.`}
-        />
+        <Image src={src} width="100px" height="100px" />
+        <Text text={name} />
+        <Text fontSize="20px" text={avis} />
       </VBox>
     </CenterContainer>
   );
@@ -25,9 +26,11 @@ const Avis = () => {
       <CenterContainer>
         <Text text="Ils nous ont fait confiance" />
       </CenterContainer>
-      <VBox gap="20px">
-        <SingleComment />
-        <SingleComment />
+      <VBox gap="50px">
+        <SingleComment name="Jerome" />
+        <SingleComment name="Jasmine" />
+        <SingleComment name="Yanis et son frère" />
+        <SingleComment name="Magalie" />
       </VBox>
     </VBox>
   );

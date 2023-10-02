@@ -20,6 +20,10 @@
   --message-receiptor-color: #44923b;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: var(--light-color);
   margin: 0;

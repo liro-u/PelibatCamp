@@ -1,12 +1,23 @@
 import React from "react";
 import HBox from "../../StructuralComponent/HBox";
 import IconButton from "../../StructuralComponent/IconButton";
+import { HashLink } from "react-router-hash-link";
 
 const FastContact = () => {
   return (
     <HBox justifyContent="center" gap="30px">
-      <IconButton iconName="call" />
-      <IconButton iconName="mail" />
+      <HashLink
+        to={"#contacts"}
+        style={{ color: "inherit", textDecoration: "inherit" }}
+      >
+        <IconButton iconName="call" />
+      </HashLink>
+      <HashLink
+        to={"#contacts"}
+        style={{ color: "inherit", textDecoration: "inherit" }}
+      >
+        <IconButton iconName="mail" />
+      </HashLink>
     </HBox>
   );
 };

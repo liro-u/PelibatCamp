@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import VBox from "../../StructuralComponent/VBox";
 import HBox from "../../StructuralComponent/HBox";
 import Text from "../../StructuralComponent/Text";
+import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
 
 const HeaderMenuPart = ({
   text,
@@ -11,41 +13,58 @@ const HeaderMenuPart = ({
   gap,
   color,
   timeAnimationHover,
+  anchor,
 }) => {
   const [hover, setHover] = useState(false);
+  const [isSelected, setIsSelected] = useState(false);
+  const location = useLocation();
 
   const toggleHover = () => {
     setHover(!hover);
   };
 
+  useEffect(() => {
+    const hashAnchor = location.hash;
+    setIsSelected("#" + anchor === hashAnchor);
+  }, [location, anchor]);
+
   return (
-    <HBox
-      gap={gap}
-      onMouseEnter={toggleHover}
-      onMouseLeave={toggleHover}
-      style={{ cursor: "pointer" }}
+    <HashLink
+      to={"#" + anchor}
+      style={{ color: "inherit", textDecoration: "inherit" }}
     >
-      <VBox justifyContent="center">
-        <div
-          style={{
-            width: hover ? lineWidthHover : lineWidth,
-            height: lineHeight,
-            backgroundColor: color,
-            transition: "width " + timeAnimationHover,
-          }}
-        />
-      </VBox>
-      <Text text={text} color={color} fontSize="15px" />
-    </HBox>
+      <HBox
+        gap={gap}
+        onMouseEnter={toggleHover}
+        onMouseLeave={toggleHover}
+        style={{ cursor: "pointer" }}
+      >
+        <VBox justifyContent="center">
+          <div
+            style={{
+              width: !isSelected
+                ? hover
+                  ? lineWidthHover
+                  : lineWidth
+                : lineWidthHover,
+              height: lineHeight,
+              backgroundColor: color,
+              transition: "width " + timeAnimationHover,
+            }}
+          />
+        </VBox>
+        <Text text={text} color={color} fontSize="15px" />
+      </HBox>
+    </HashLink>
   );
 };
 
 const HeaderMenu = ({
   // HeaderMenu Props
   anchors = [
-    { text: "Nos Accompagnements", anchor: "" },
-    { text: "Tarifs", anchor: "" },
-    { text: "Contact", anchor: "" },
+    { text: "Nos Accompagnements", anchor: "accompagnement" },
+    { text: "Tarifs", anchor: "tarifs" },
+    { text: "Contact", anchor: "contacts" },
   ],
   // HeaderMenuPart Props
   lineWidth = "30px",
@@ -68,6 +87,7 @@ const HeaderMenu = ({
             color={color}
             timeAnimationHover={timeAnimationHover}
             text={anchorObject.text}
+            anchor={anchorObject.anchor}
           />
         );
       })}

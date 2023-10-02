@@ -12,15 +12,16 @@ import {
   ReceiptorMessage,
   Conversation,
 } from "../Component/Conversation/Conversation";
-import HBox from "../StructuralComponent/HBox";
-import IconButton from "../StructuralComponent/IconButton";
 import Contact from "../Component/Contact/Contact";
-import Image from "../StructuralComponent/Image";
 import GiftCard from "../Component/GiftCard/GiftCard";
 import Vestiaire from "../Component/Vestiaire/Vestiaire";
 import Tarifs from "../Component/Tarifs/Tarifs";
 import Video from "../StructuralComponent/Video";
 import Avis from "../Component/Avis/Avis";
+import Ordonnance from "../Component/Ordonnance/Ordonnance";
+import Diplomes from "../Component/Diplomes/Diplomes";
+import Promesses from "../Component/Promesses/Promesses";
+import Formules from "../Component/Formules/Formules";
 
 const CustomProfile = ({ backgroundColor, ...content }) => {
   return (
@@ -100,6 +101,34 @@ const Vitrine = () => {
         </MarginContainer>
       </ColorRect>
 
+      {/*---------- Diplomes ----------*/}
+      <ColorRect backgroundColor="var(--pastel1)">
+        <MarginContainer margin="var(--margin-section)">
+          <Diplomes />
+        </MarginContainer>
+      </ColorRect>
+
+      {/*---------- Promesses ----------*/}
+      <ColorRect backgroundColor="var(--pastel3)">
+        <MarginContainer margin="var(--margin-section)">
+          <Promesses />
+        </MarginContainer>
+      </ColorRect>
+
+      {/*---------- Formules ----------*/}
+      <ColorRect backgroundColor="var(--pastel4)" id="accompagnement">
+        <MarginContainer margin="var(--margin-section)">
+          <Formules />
+        </MarginContainer>
+      </ColorRect>
+
+      {/*---------- Sport Sur Ordonnance ----------*/}
+      <ColorRect backgroundColor="var(--pastel1)">
+        <MarginContainer margin="var(--margin-section)">
+          <Ordonnance />
+        </MarginContainer>
+      </ColorRect>
+
       {/*---------- Avis ----------*/}
       <ColorRect backgroundColor="var(--pastel2)">
         <MarginContainer margin="var(--margin-section)">
@@ -131,9 +160,10 @@ const Vitrine = () => {
       <ColorRect
         backgroundColor="var(--light-color)"
         style={{ color: "var(--dark-color)" }}
+        id="tarifs"
       >
         <MarginContainer margin="var(--margin-section)">
-          <Tarifs id="tarifs" />
+          <Tarifs />
         </MarginContainer>
       </ColorRect>
 
@@ -151,7 +181,7 @@ const Vitrine = () => {
       </ColorRect>
 
       {/*---------- Contact ----------*/}
-      <ColorRect backgroundColor="#333">
+      <ColorRect backgroundColor="#333" id="contacts">
         <CenterContainer>
           <MarginContainer margin="20px">
             <Contact />
