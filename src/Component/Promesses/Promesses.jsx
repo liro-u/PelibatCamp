@@ -3,13 +3,18 @@ import VBox from "../../StructuralComponent/VBox";
 import CenterContainer from "../../StructuralComponent/CenterContainer";
 import Text from "../../StructuralComponent/Text";
 import MarginContainer from "../../StructuralComponent/MarginContainer";
+import Card from "../Card";
 
 const Promesse = ({ title, children }) => {
   return (
-    <VBox gap="20px">
-      <Text text={title} />
-      <VBox gap="15px">{children}</VBox>
-    </VBox>
+    <Card style={{ marginTop: 0 }}>
+      <MarginContainer margin="var(--margin-section)">
+        <VBox gap="20px">
+          <Text text={title} />
+          <VBox gap="15px">{children}</VBox>
+        </VBox>
+      </MarginContainer>
+    </Card>
   );
 };
 
@@ -17,9 +22,9 @@ const Promesses = () => {
   return (
     <VBox gap="var(--title-spacing)">
       <CenterContainer>
-        <Text text="Nos Promesses" />
+        <Text text="On te promet quoi ?" fontSize="50px" fontWeight="bold" />
       </CenterContainer>
-      <VBox gap="20px">
+      <VBox gap="0px">
         <Promesse title="Suivi ultra personnalisé">
           <Text
             fontSize="20px"

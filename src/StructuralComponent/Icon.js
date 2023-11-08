@@ -12,7 +12,7 @@ const Icon = ({
   return (
     <span
       className="material-symbols-outlined"
-      style={{ ...style, color, fontSize }}
+      style={{ color, fontSize, ...style }}
       {...content}
     >
       {iconName}

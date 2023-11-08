@@ -2,12 +2,21 @@ import React from "react";
 import VBox from "../../StructuralComponent/VBox";
 import CenterContainer from "../../StructuralComponent/CenterContainer";
 import Text from "../../StructuralComponent/Text";
+import Image from "../../StructuralComponent/Image";
 
 const Ordonnance = () => {
   return (
     <VBox gap="var(--title-spacing)">
       <CenterContainer>
         <Text text="Sport Sur Ordonnance" />
+      </CenterContainer>
+      <CenterContainer>
+        <Image
+          width="100px"
+          objectFit="contain"
+          height="100px"
+          src="https://cdn.discordapp.com/attachments/1126212462593716359/1171466574025203802/1_U7-zY8AKyxcLBOV3e6YDaHBUm_GgQjPouv3MKHXWBBLtDGVqeAWUfCNiEYDaQ.png?ex=655cc844&is=654a5344&hm=dde778f9e1ca8a6b76d43e8ef1910cfaac9a0791c5bb46e45ec1f736822948cb&"
+        />
       </CenterContainer>
       <CenterContainer>
         <VBox gap="20px">
@@ -23,6 +32,18 @@ const Ordonnance = () => {
             fontSize="20px"
             text="Sport sur ordonnance : qui peut en bénéficier et quelle est la prise en charge ?"
           />
+          <Text text="" />
+          <Text
+            fontSize="25px"
+            color="red"
+            text="Pour plus de renseignements, tu peux aller consulter le site du gouvernement :"
+          />
+          <a href="https://www.monparcourshandicap.gouv.fr/actualite/sport-sur-ordonnance-pour-qui-pourquoi-comment">
+            <Text
+              fontSize="20px"
+              text="Sport sur ordonnance | Mon Parcours Handicap"
+            />
+          </a>
           <Text text="" />
           <Text
             fontSize="20px"

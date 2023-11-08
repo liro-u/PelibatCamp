@@ -10,13 +10,13 @@ const FastContact = () => {
         to={"#contacts"}
         style={{ color: "inherit", textDecoration: "inherit" }}
       >
-        <IconButton iconName="call" />
+        <IconButton iconName="call" style={{ color: "#fff" }} />
       </HashLink>
       <HashLink
         to={"#contacts"}
         style={{ color: "inherit", textDecoration: "inherit" }}
       >
-        <IconButton iconName="mail" />
+        <IconButton iconName="mail" style={{ color: "#fff" }} />
       </HashLink>
     </HBox>
   );

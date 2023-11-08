@@ -13,10 +13,23 @@ const Diplomes = () => {
       </CenterContainer>
       <MarginContainer margin="20px">
         <VBox gap="20px">
-          <Image src="diplome.jpg" width="100%" height="100%" />
-          <Image src="diplome.jpg" width="100%" height="100%" />
-          <Image src="diplome.jpg" width="100%" height="100%" />
-          <Image src="diplome.jpg" width="100%" height="100%" />
+          <Text
+            fontSize="20px"
+            text="BPGEPS (Activité de la forme option althérophilie, option cour collectif)"
+          />
+          <Text fontSize="20px" text="BPGEPS (Activité physique pour tous)" />
+          <Text
+            fontSize="20px"
+            text="CS AMAP (Animation et maintien de l'autonomie de la personne)"
+          />
+          <Text
+            fontSize="20px"
+            text="CS (optimisé la préparation mentale des sportifs)"
+          />
+          <Text
+            fontSize="20px"
+            text="CS (accompagné dans le cadre d'un programme nutritionnel)"
+          />
         </VBox>
       </MarginContainer>
     </VBox>

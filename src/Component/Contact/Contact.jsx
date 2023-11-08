@@ -43,7 +43,7 @@ const Contact = ({ fontSize = "20px", iconSize = "20px" }) => {
   };
 
   return (
-    <VBox gap="20px">
+    <VBox gap="20px" style={{ color: "var(--light-color)" }}>
       <Text text="Contact" />
       <HBox justifyContent="center" gap="20px">
         <Social src="insta.webp" />
