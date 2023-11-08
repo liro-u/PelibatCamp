@@ -57,7 +57,7 @@ const Vitrine = () => {
         {/*---------- PROFILES ----------*/}
         <VBox>
           <CustomProfile
-            src="photoProfileJoe.png"
+            src="https://cdn.discordapp.com/attachments/1126212462593716359/1171756914141573130/1678095072219.png?ex=655dd6aa&is=654b61aa&hm=2fabcabf802fcf3c63bb3abb2dfa4c1b10ffd601e494a969c73912a85299c921&"
             nom=""
             prenom="Jo"
             citations={[

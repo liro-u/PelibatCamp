@@ -42,6 +42,7 @@ const ProfilePicture = ({
 
 const Profile = ({
   fontSize = "15px",
+  src = "",
   nom = "Nom",
   prenom = "Prenom",
   citations = [
@@ -53,7 +54,7 @@ const Profile = ({
   return (
     <VBox gap="30px">
       <CenterContainer>
-        <ProfilePicture />
+        <ProfilePicture src={src} />
       </CenterContainer>
       <Text text={prenom + " " + nom} style={{ textAlign: "center" }} />
       <Citations
