@@ -7,6 +7,8 @@ const VideoRect = ({
   videoPosition = "absolute",
 
   style = {},
+  videoStyle = {},
+  childrenStyle = {},
   children,
   ...content
 }) => {
@@ -27,6 +29,7 @@ const VideoRect = ({
           height: "100%",
           zIndex: -1,
           position: videoPosition,
+          ...videoStyle,
         }}
       />
       <div
@@ -34,6 +37,7 @@ const VideoRect = ({
           overflow: "auto",
           width: "100%",
           height: "100%",
+          ...childrenStyle,
         }}
       >
         {children}

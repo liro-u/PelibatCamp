@@ -5,7 +5,10 @@ import HeaderMenu from "./HeaderMenu";
 
 const Header = () => {
   return (
-    <HBox justifyContent="space-between">
+    <HBox
+      justifyContent="space-between"
+      style={{ zIndex: 5, position: "relative" }}
+    >
       <HeaderMenu />
       <Image
         src="logoPelibatCamp.png"

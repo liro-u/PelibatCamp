@@ -51,6 +51,7 @@ const Tarif = ({ title, otherInformations, reservationLink, ...content }) => {
 const Tarifs = ({ ...content }) => {
   return (
     <Image
+      id="tarifs"
       width="100%"
       height="100%"
       style={{ borderRadius: "30px" }}

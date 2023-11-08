@@ -11,6 +11,8 @@ const IntroVideoSection = () => {
       autoPlay="true"
       src="videoDemoVitrine.mp4"
       style={{ position: "relative" }}
+      videoStyle={{ zIndex: 1 }}
+      childrenStyle={{ zIndex: 2, position: "relative" }}
     >
       <VBox justifyContent="center" mainBoxStyle={{ height: "100svh" }}>
         <CenterContainer>

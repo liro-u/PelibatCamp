@@ -31,7 +31,7 @@ const Formule = ({ title, hashLink, src = "seance.jpg", children }) => {
 
 const Formules = () => {
   return (
-    <VBox gap="var(--title-spacing)">
+    <VBox gap="var(--title-spacing)" id="accompagnement">
       <CenterContainer>
         <Text text="Nos Formules" fontSize="50px" fontWeight="bold" />
       </CenterContainer>

@@ -46,7 +46,7 @@ const HeaderMenuPart = ({
                 ? hover
                   ? lineWidthHover
                   : lineWidth
-                : lineWidthHover,
+                : lineWidth /*lineWidthHover*/,
               height: lineHeight,
               backgroundColor: color,
               transition: "width " + timeAnimationHover,

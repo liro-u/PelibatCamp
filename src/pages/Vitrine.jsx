@@ -42,7 +42,7 @@ const CustomProfile = ({ ...content }) => {
 const Vitrine = () => {
   return (
     <ColorRect style={{ zIndex: -1 }} backgroundColor="#538135">
-      <VBox style={{ overflow: "hidden", zIndex: 0 }}>
+      <VBox style={{ overflow: "hidden" }}>
         {/*---------- HEADER ----------*/}
         <MarginContainer
           margin={"var(--margin-section)"}
