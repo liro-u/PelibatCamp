@@ -81,12 +81,12 @@ const Vitrine = () => {
           <Image
             style={{
               margin: "30px",
-              marginLeft: pageRatio === "tel" ? "inherit" : "25%",
-              marginRight: pageRatio === "tel" ? "inherit" : "25%",
+              marginLeft: pageRatio === "tel" ? "30px" : "25%",
+              marginRight: pageRatio === "tel" ? "30px" : "25%",
               borderRadius: "30px",
             }}
             width={pageRatio === "tel" ? "calc(100% - 60px)" : "50%"}
-            height="200px"
+            height={pageRatio === "tel" ? "200px" : "400px"}
             objectFit="cover"
             src="outdoor1.png"
           />
@@ -94,12 +94,12 @@ const Vitrine = () => {
             style={{
               margin: "30px",
               marginTop: 0,
-              marginLeft: pageRatio === "tel" ? "inherit" : "25%",
-              marginRight: pageRatio === "tel" ? "inherit" : "25%",
+              marginLeft: pageRatio === "tel" ? "30px" : "25%",
+              marginRight: pageRatio === "tel" ? "30px" : "25%",
               borderRadius: "30px",
             }}
             width={pageRatio === "tel" ? "calc(100% - 60px)" : "50%"}
-            height="200px"
+            height={pageRatio === "tel" ? "200px" : "400px"}
             objectFit="cover"
             src="outdoor2.png"
           />
@@ -151,25 +151,25 @@ const Vitrine = () => {
         <Image
           style={{
             margin: "30px",
-            marginLeft: pageRatio === "tel" ? "inherit" : "25%",
-            marginRight: pageRatio === "tel" ? "inherit" : "25%",
+            marginLeft: pageRatio === "tel" ? "30px" : "25%",
+            marginRight: pageRatio === "tel" ? "30px" : "25%",
             borderRadius: "30px",
           }}
           width={pageRatio === "tel" ? "calc(100% - 60px)" : "50%"}
-          height="200px"
+          height={pageRatio === "tel" ? "200px" : "400px"}
           objectFit="cover"
-          src="outdoor3.png"
+          src="outdoor5.webp"
         />
         <Image
           style={{
             margin: "30px",
             marginTop: 0,
-            marginLeft: pageRatio === "tel" ? "inherit" : "25%",
-            marginRight: pageRatio === "tel" ? "inherit" : "25%",
+            marginLeft: pageRatio === "tel" ? "30px" : "25%",
+            marginRight: pageRatio === "tel" ? "30px" : "25%",
             borderRadius: "30px",
           }}
           width={pageRatio === "tel" ? "calc(100% - 60px)" : "50%"}
-          height="200px"
+          height={pageRatio === "tel" ? "200px" : "400px"}
           objectFit="cover"
           src="outdoor4.png"
         />
@@ -210,9 +210,7 @@ const Vitrine = () => {
 
         {/*---------- Tarifs ----------*/}
 
-        <MarginContainer margin="var(--margin-section)">
-          <Tarifs />
-        </MarginContainer>
+        <Tarifs />
 
         {/*---------- Shop ----------*/}
         <VBox gap="10px">

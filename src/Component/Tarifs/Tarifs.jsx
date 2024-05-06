@@ -52,13 +52,20 @@ const Tarif = ({ title, otherInformations, reservationLink, ...content }) => {
 const Tarifs = ({ ...content }) => {
   return (
     <Card>
-      <Image
-        id="tarifs"
-        width="100%"
-        height="100%"
-        style={{ borderRadius: "30px" }}
-        src="tarif.webp"
-      />
+      <MarginContainer margin="var(--margin-section)">
+        <VBox gap="var(--title-spacing)">
+          <CenterContainer>
+            <Text text="Tarifs" fontWeight="bold" fontSize="40px" />
+          </CenterContainer>
+          <Image
+            id="tarifs"
+            width="100%"
+            height="100%"
+            style={{ borderRadius: "30px" }}
+            src="tarif.webp"
+          />
+        </VBox>
+      </MarginContainer>
     </Card>
   );
 };

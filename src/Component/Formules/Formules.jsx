@@ -36,7 +36,11 @@ const Formules = () => {
         <Text text="Nos Formules" fontSize="50px" fontWeight="bold" />
       </CenterContainer>
       <VBox gap="0px">
-        <Formule title="Programme personnalisé" hashLink="programme_perso">
+        <Formule
+          title="Programme personnalisé"
+          hashLink="programme_perso"
+          src="seance1.jpg"
+        >
           <Text
             fontSize="20px"
             text="C’est un plan d’entraînement que je vais élaborer spécifiquement pour toi, qui va te permettre d’atteindre les objectifs que tu t’es fixé."
@@ -46,7 +50,11 @@ const Formules = () => {
             text=" Le but est que tu puisses suivre un programme d’entrainement chez toi, en salle de sport ou en extérieur qui sera adapté à tes besoins et à ton équipement."
           />
         </Formule>
-        <Formule title="Coaching (solo, duo)" hashLink="coaching">
+        <Formule
+          title="Coaching (solo, duo)"
+          hashLink="coaching"
+          src="seance2.jpg"
+        >
           <Text
             fontSize="20px"
             text="C’est un accompagnement personnalisé, qui va permettre de te guider, de te suivre et de te soutenir tout au long de ta séance . C’est un suivi sur le plan physique mais aussi psychologique."
@@ -56,7 +64,11 @@ const Formules = () => {
             text="On déterminera ensemble tes points forts et tes points faibles, pour élaborer un entrainement sur mesure. "
           />
         </Formule>
-        <Formule title="Coaching Visio" hashLink="coaching_visio">
+        <Formule
+          title="Coaching Visio"
+          hashLink="coaching_visio"
+          src="seance3.jpg"
+        >
           <Text
             fontSize="20px"
             text="C’est un accompagnement en ligne depuis le lieu de ton choix."
@@ -73,6 +85,7 @@ const Formules = () => {
         <Formule
           title="Functional training  (lundi et mercredi soir)"
           hashLink="functional_training"
+          src="seance4.jpg"
         >
           <Text
             fontSize="20px"
@@ -87,7 +100,11 @@ const Formules = () => {
             text="Aucunes séances ne se ressemblent, la surprise est garantie !! "
           />
         </Formule>
-        <Formule title="Randonnée des côteaux" hashLink="rando">
+        <Formule
+          title="Randonnée des côteaux"
+          hashLink="rando"
+          src="seance.jpg"
+        >
           <Text
             fontSize="20px"
             text="C’est la découverte des sentiers et domaines environnants."
@@ -97,7 +114,11 @@ const Formules = () => {
             text="Je te propose de mélanger le sport et la culture en découvrant à pieds ou à VTT le patrimoine local de nos côteaux."
           />
         </Formule>
-        <Formule title="Bilan nutrition" hashLink="bilan_nutri">
+        <Formule
+          title="Bilan nutrition"
+          hashLink="bilan_nutri"
+          src="outdoor3.png"
+        >
           <Text
             fontSize="20px"
             text="Nous allons faire ensemble un point sur tes habitudes alimentaires,  les quantités, et les apports nutritionnels dont ton corps à besoin."
