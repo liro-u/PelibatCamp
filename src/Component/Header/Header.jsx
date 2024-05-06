@@ -11,8 +11,9 @@ const Header = () => {
     >
       <HeaderMenu />
       <Image
-        src="logoPelibatCamp.png"
-        width="100px"
+        src="logoPelibatCamp.webp"
+        objectFit="contain"
+        width="150px"
         height="100px"
         style={{ position: "absolute", right: "0" }}
       />

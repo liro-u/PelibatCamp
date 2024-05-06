@@ -15,7 +15,7 @@ const Ordonnance = () => {
           width="100px"
           objectFit="contain"
           height="100px"
-          src="https://cdn.discordapp.com/attachments/1126212462593716359/1171466574025203802/1_U7-zY8AKyxcLBOV3e6YDaHBUm_GgQjPouv3MKHXWBBLtDGVqeAWUfCNiEYDaQ.png?ex=655cc844&is=654a5344&hm=dde778f9e1ca8a6b76d43e8ef1910cfaac9a0791c5bb46e45ec1f736822948cb&"
+          src="croix.png"
         />
       </CenterContainer>
       <CenterContainer>

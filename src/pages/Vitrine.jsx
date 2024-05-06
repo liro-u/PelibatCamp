@@ -24,6 +24,7 @@ import Promesses from "../Component/Promesses/Promesses";
 import Formules from "../Component/Formules/Formules";
 import Card from "../Component/Card";
 import Image from "../StructuralComponent/Image";
+import { usePageRatioContext } from "../hooks/usePageRatioContexte";
 
 const CustomProfile = ({ ...content }) => {
   return (
@@ -40,6 +41,7 @@ const CustomProfile = ({ ...content }) => {
 };
 
 const Vitrine = () => {
+  const { pageRatio } = usePageRatioContext();
   return (
     <ColorRect style={{ zIndex: -1 }} backgroundColor="#538135">
       <VBox style={{ overflow: "hidden" }}>
@@ -57,7 +59,7 @@ const Vitrine = () => {
         {/*---------- PROFILES ----------*/}
         <VBox>
           <CustomProfile
-            src="https://cdn.discordapp.com/attachments/1126212462593716359/1171756914141573130/1678095072219.png?ex=655dd6aa&is=654b61aa&hm=2fabcabf802fcf3c63bb3abb2dfa4c1b10ffd601e494a969c73912a85299c921&"
+            src="photoProfileJoe.png"
             nom=""
             prenom="Jo"
             citations={[
@@ -67,7 +69,7 @@ const Vitrine = () => {
             ]}
           />
           <CustomProfile
-            src="photoProfileManon.png"
+            src="photoProfileManon.webp"
             nom="Bordes"
             prenom="Manon"
             citations={[
@@ -77,18 +79,29 @@ const Vitrine = () => {
             ]}
           />
           <Image
-            style={{ margin: "30px" }}
-            width="calc(100% - 60px)"
+            style={{
+              margin: "30px",
+              marginLeft: pageRatio === "tel" ? "inherit" : "25%",
+              marginRight: pageRatio === "tel" ? "inherit" : "25%",
+              borderRadius: "30px",
+            }}
+            width={pageRatio === "tel" ? "calc(100% - 60px)" : "50%"}
             height="200px"
             objectFit="cover"
-            src="https://media.discordapp.net/attachments/1126212462593716359/1171449352095539250/1eYEQEOpiKwZLVkURipPz2E5izSZ2nHOLjt6o-ocN_aP2nDwXzJISNfGARzCztw.png?ex=655cb83a&is=654a433a&hm=3da3ec76265a8a24eec20f65e863a47030220bf106f9f9f053d265bc5a0c5306&=&width=640&height=493"
+            src="outdoor1.png"
           />
           <Image
-            style={{ margin: "30px", marginTop: 0 }}
-            width="calc(100% - 60px)"
+            style={{
+              margin: "30px",
+              marginTop: 0,
+              marginLeft: pageRatio === "tel" ? "inherit" : "25%",
+              marginRight: pageRatio === "tel" ? "inherit" : "25%",
+              borderRadius: "30px",
+            }}
+            width={pageRatio === "tel" ? "calc(100% - 60px)" : "50%"}
             height="200px"
             objectFit="cover"
-            src="https://cdn.discordapp.com/attachments/1126212462593716359/1171449443615244318/16p0fzOcAZzHfxQSrkt00KD2s6CBolk7GEP2h9jrtKafGR5tXM1Ox_Kk4lj_q0tI.png?ex=655cb84f&is=654a434f&hm=fa41416ad529e2c43a16808ff2eb2885a9912d4282386dbb0fd25c8edf4ea7f8&"
+            src="outdoor2.png"
           />
         </VBox>
 
@@ -120,9 +133,9 @@ const Vitrine = () => {
                 <h1>Allons un peu plus loin…</h1>
                 <h3>Manon, on t’écoute il est comment Jonathan ?</h3>
                 <p>
-                  text="C’est un coach incroyable, il est à l’écoute de tous. Il
-                  ne juge pas et sera toujours derrière toi pour que tu
-                  atteignes tes objectifs !
+                  C’est un coach incroyable, il est à l’écoute de tous. Il ne
+                  juge pas et sera toujours derrière toi pour que tu atteignes
+                  tes objectifs !
                 </p>
                 <h3>Jonathan, et Manon ? dit nous tout !</h3>
                 <p>
@@ -136,18 +149,29 @@ const Vitrine = () => {
         </Card>
 
         <Image
-          style={{ margin: "30px" }}
-          width="calc(100% - 60px)"
+          style={{
+            margin: "30px",
+            marginLeft: pageRatio === "tel" ? "inherit" : "25%",
+            marginRight: pageRatio === "tel" ? "inherit" : "25%",
+            borderRadius: "30px",
+          }}
+          width={pageRatio === "tel" ? "calc(100% - 60px)" : "50%"}
           height="200px"
           objectFit="cover"
-          src="https://cdn.discordapp.com/attachments/1126212462593716359/1171449561458409482/1BAoHnUMcRvK6wh7vFF0jtPZ0VpFde4yNQYOM1CKodZFzeBLbnjrjBTiTUzB8PY8.png?ex=655cb86b&is=654a436b&hm=fe09b391ff5ab8fbf3c8114115a5c3d6b559d961612e6ab33313b9aca7992d0f&"
+          src="outdoor3.png"
         />
         <Image
-          style={{ margin: "30px", marginTop: 0 }}
-          width="calc(100% - 60px)"
+          style={{
+            margin: "30px",
+            marginTop: 0,
+            marginLeft: pageRatio === "tel" ? "inherit" : "25%",
+            marginRight: pageRatio === "tel" ? "inherit" : "25%",
+            borderRadius: "30px",
+          }}
+          width={pageRatio === "tel" ? "calc(100% - 60px)" : "50%"}
           height="200px"
           objectFit="cover"
-          src="https://cdn.discordapp.com/attachments/1126212462593716359/1171449593863606342/1Syw-pIgx-fes-FmP7wKHtg7S4pTPWyrWlJrVHRQlbKiwRZJyzNT1KAC8WBz5BA.png?ex=655cb873&is=654a4373&hm=8a49c45b853d0852b84d232f79609704c367eda79c65a71a1b707bc1507276b8&"
+          src="outdoor4.png"
         />
 
         {/*---------- Diplomes ----------*/}
@@ -178,7 +202,7 @@ const Vitrine = () => {
           <Video
             width="100%"
             height="calc(100%)"
-            src="videoDemoVitrine.mp4"
+            src="demoVideo.mp4"
             style={{ borderRadius: "10px" }}
             autoPlay="true"
           />
